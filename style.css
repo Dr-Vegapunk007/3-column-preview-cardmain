@@ -7,10 +7,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: hsl(0, 0%, 95%);
+  overflow: auto;
 }
 main {
   display: grid;
@@ -68,4 +69,28 @@ a {
 div a:hover {
   color: hsl(0, 0%, 100%);
   background-color: hsla(0, 91%, 45%, 0);
+}
+@media all and (max-width: 928px) {
+  main {
+    grid-template-columns: 1fr;
+    margin-top: 800px;
+    margin-bottom: 30px;
+  }
+  main div {
+    padding: 40px 30px 30px 40px;
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .sedans {
+    border-radius: 10px 10px 0px 0px;
+  }
+  .luxury {
+    border-radius: 0px 0px 10px 10px;
+  }
+  article {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
 }
